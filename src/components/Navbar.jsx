@@ -4,6 +4,8 @@ import Badge from 'react-bootstrap/Badge';
 import Modal from '../Modal';
 import Cart from '../screens/Cart';
 import { useCart } from './ContextReducer';
+// import logo from './assets/eatzy-logo.png';
+import logo from "../assets/eatzy-logo.png";
 
 const Navbar = () => {
 
@@ -22,7 +24,7 @@ const Navbar = () => {
         <nav className="navbar navbar-expand-lg navbar-dark bg-success">
   <div className="container-fluid">
     <Link to="/" className="navbar-brand">
-  <img src="\src\assets\eatzy-logo.png" alt="Eatzy Logo" style={{ height: '50px' }} /></Link>
+  <img src={logo} alt="Eatzy_Logo" style={{ height: '50px' }} /></Link>
     <button className="navbar-toggler my-button" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
     </button>
