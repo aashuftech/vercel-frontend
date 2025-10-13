@@ -18,7 +18,7 @@ export default function Cart() {
     const handlePlaceOrder = async()=>{
         let userEmail = localStorage.getItem("userEmail");
         console.log("userEmail:", userEmail);
-        let response = await fetch("http://localhost:5000/api/orderData",{
+        let response = await fetch("https://vercel-backend-6e4o.vercel.app/api/orderData",{
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
