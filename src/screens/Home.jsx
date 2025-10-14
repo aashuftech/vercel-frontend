@@ -78,45 +78,38 @@ export default function Home() {
 </div>
 
 
-      <div className="container">
-{/*----------------------------Filter Category By Name-------------------  */}
-      
-      {foodItem !==[]
-      ? foodCat.map((data) => {
-        return ( <div key={data._id} className="row mb-3">
-          <div className="fs-3 m-3">
-            {data.CategoryName}
-            </div>
-            <hr/>
-{/*-----------------------------Filter Items By Name --------------------  */}
+  <div className="container">
+  {foodCat && foodCat.length > 0 ? (
+    foodCat.map((data) => (
+      <div key={data._id} className="row mb-3">
+        <div className="fs-3 m-3">{data.CategoryName}</div>
+        <hr />
 
-        {foodItem !==[] ? foodItem.filter((item)=> item.CategoryName === data.CategoryName && (item.name.toLowerCase().includes(search.toLocaleLowerCase()))) 
-          .map(filterItems=>{
-            return (
-              <div key={filterItems._id} className="col-12 col-md-6 col-lg-3">
-{/*----------------------------------------------------------sending data in props to card  */}
-                
-                {/* <Card foodName = {filterItems.name}
-                options = {filterItems.options[0]}
-                 imgSrc={filterItems.img}
-                ></Card> */}
-                <Card foodItem = {filterItems}
-                options = {filterItems.options[0]}
-                 
-                ></Card>
-              </div>
+        {foodItem && foodItem.length > 0 ? (
+          foodItem
+            .filter(
+              (item) =>
+                item.CategoryName === data.CategoryName &&
+                item.name.toLowerCase().includes(search.toLowerCase())
             )
-          }) 
-          : <div> No such data found.</div>}
+            .map((filterItems) => (
+              <div key={filterItems._id} className="col-12 col-md-6 col-lg-3">
+                <Card
+                  foodItem={filterItems}
+                  options={filterItems.options[0]}
+                />
+              </div>
+            ))
+        ) : (
+          <div>No such data found.</div>
+        )}
+      </div>
+    ))
+  ) : (
+    <div>No Categories</div>
+  )}
+</div>
 
-        </div>
-        
-        )
-      })
-    : <div>No Categories</div>
-}
-
-        </div>
       <div><Footer /></div>
         
       
