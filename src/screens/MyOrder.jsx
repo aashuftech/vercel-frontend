@@ -13,7 +13,8 @@ const MyOrder = () => {
     console.log("Fetching orders for:", email);
 
     // 🔹 Fixed endpoint name from 'myorderData' → 'myOrderData'
-    const res = await fetch("https://vercel-backend-6e4o.vercel.app/api/myOrderData", {
+    // const res = await fetch("https://vercel-backend-6e4o.vercel.app/api/myOrderData", {
+    const res = await fetch("https://vercel-backend-taum.onrender.com/api/myOrderData", {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

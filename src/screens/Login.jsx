@@ -9,7 +9,8 @@ const Login = () => {
     
         const handleSubmit =async (e)=>{
             e.preventDefault();          //-----------------SYNTHETIC EVENT
-            const response = await fetch("https://vercel-backend-6e4o.vercel.app/api/loginuser",{
+            // const response = await fetch("https://vercel-backend-6e4o.vercel.app/api/loginuser",{
+            const response = await fetch("https://vercel-backend-taum.onrender.com/api/loginuser",{
                 method:'POST',
                 headers:{
                     'Content-Type':'application/json'

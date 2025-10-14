@@ -18,7 +18,8 @@ export default function Cart() {
     const handlePlaceOrder = async()=>{
         let userEmail = localStorage.getItem("userEmail");
         console.log("userEmail:", userEmail);
-        let response = await fetch("https://vercel-backend-6e4o.vercel.app/api/orderData",{
+        // let response = await fetch("https://vercel-backend-6e4o.vercel.app/api/orderData",{
+        let response = await fetch("https://vercel-backend-taum.onrender.com/api/orderData",{
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
