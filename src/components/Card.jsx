@@ -7,7 +7,7 @@
   let dispatch = useDispatchCart();  
   let data = useCart()
   const priceRef = useRef();
-    let options = props.options;
+    let options = props.options || {} ;
     let priceOptions = Object.keys(options);
     const [qty, setQty] = useState(1);
     const [size, setSize] = useState("")
