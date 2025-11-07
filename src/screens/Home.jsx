@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 import Card from "../components/Card"; 
 // import images from '../assets/images'; 
 // import images from "../Utils/images"; 
-import { useEffect, useReducer } from "react";
+import { useEffect } from "react";
 
 // console.log(images)
 
@@ -16,7 +16,7 @@ export default function Home() {
 
   const loadData = async ()=>{
     // let response = await fetch("https://vercel-backend-6e4o.vercel.app/api/foodData",{
-    let response = await fetch("https://vercel-backend-taum.onrender.com/api/foodData",{
+    let response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/foodData`,{
       method: "POST",
       headers: {
         'Content-Type': 'application/json'

@@ -19,7 +19,7 @@ export default function Cart() {
         let userEmail = localStorage.getItem("userEmail");
         console.log("userEmail:", userEmail);
         // let response = await fetch("https://vercel-backend-6e4o.vercel.app/api/orderData",{
-        let response = await fetch("https://vercel-backend-taum.onrender.com/api/orderData",{
+        let response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/orderData`,{
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

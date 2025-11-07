@@ -14,7 +14,7 @@ const MyOrder = () => {
 
     // 🔹 Fixed endpoint name from 'myorderData' → 'myOrderData'
     // const res = await fetch("https://vercel-backend-6e4o.vercel.app/api/myOrderData", {
-    const res = await fetch("https://vercel-backend-taum.onrender.com/api/myOrderData", {
+    const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/myOrderData`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

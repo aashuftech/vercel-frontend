@@ -10,7 +10,7 @@ const Signup = () => {
     const handleSubmit =async (e)=>{
         e.preventDefault();          //-----------------SYNTHETIC EVENT
         // const response = await fetch("https://vercel-backend-6e4o.vercel.app/api/createuser",{
-        const response = await fetch("https://vercel-backend-6e4o.vercel.app/api/createuser",{
+        const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/createuser`,{
             method:'POST',
             headers:{
                 'Content-Type':'application/json'

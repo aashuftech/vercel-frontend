@@ -10,7 +10,7 @@ const Login = () => {
         const handleSubmit =async (e)=>{
             e.preventDefault();          //-----------------SYNTHETIC EVENT
             // const response = await fetch("https://vercel-backend-6e4o.vercel.app/api/loginuser",{
-            const response = await fetch("https://vercel-backend-taum.onrender.com/api/loginuser",{
+            const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/loginuser`,{
                 method:'POST',
                 headers:{
                     'Content-Type':'application/json'
@@ -56,7 +56,7 @@ const Login = () => {
   </div>
   <div className="m-3">
     <label htmlFor="exampleInputPassword1" className="form-label">Password</label>
-    <input type="password" className="form-control form-control bg-dark text-white border-0" id="exampleInputPassword1" name='password' value={credentials.password} onChange={onChange} name='password'/>
+    <input type="password" className="form-control form-control bg-dark text-white border-0" id="exampleInputPassword1" name='password' value={credentials.password} onChange={onChange} />
   </div>
   <button type="submit" className="btn btn-success ms-4 px-4 fw-semibold">LOGIN</button>
 
